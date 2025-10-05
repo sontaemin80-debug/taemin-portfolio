@@ -1,0 +1,15 @@
+﻿# Ignore build outputs
+**/bin/
+**/obj/
+
+# IDE settings and user files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# NuGet packages
+*.nupkg
+
+# Rider
+.idea/
