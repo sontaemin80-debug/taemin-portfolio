@@ -44,8 +44,18 @@ export default function PortfolioTitlePage() {
         <section className="bg-white rounded-2xl shadow-lg px-4 pt-6 pb-5 text-center">
           <div className="text-[20px] font-bold text-[#2e3847] mb-3 text-center">Contact</div>
           <div className="flex flex-row flex-wrap items-center justify-center gap-4 text-[#4a5769] text-[15px] font-medium">
-            <span className="flex items-center gap-1"><span className="text-lg">📧</span>sontaemin80@nate.com</span>
-            <span className="flex items-center gap-1"><span className="text-lg">💻</span>GitHub</span>
+            <a href="mailto:sontaemin80@nate.com" className="flex items-center gap-1 hover:underline text-[#4a5769]">
+              <span className="text-lg">📧</span>
+              <span>sontaemin80@nate.com</span>
+            </a>
+            <a
+              href="https://github.com/sontaemin80-debug/taemin-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:underline text-[#4a5769]"
+            >
+              <span className="text-lg">💻</span>GitHub|포트폴리오
+            </a>
             <span className="flex items-center gap-1"><span className="text-lg">💼</span>LinkedIn</span>
           </div>
         </section>

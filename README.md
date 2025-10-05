@@ -1,1 +1,5 @@
-1.tmgame : 이력서및 포트폴리오를 포함한 Node.js 웹엡 코드입니다. 배포된 주소는 https://tmgame.vercel.app/portfolio-title-page
+1.tmgame 이력서및 포트폴리오 Node.js 웹엡코드입니다. 
+- 이력서 : https://tmgame.vercel.app/resume
+- 이력서PDF :  
+- https://tmgame.vercel.app/portfolio-title-page
+

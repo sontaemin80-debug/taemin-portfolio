@@ -24,3 +24,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Print rules: request that browsers preserve colors/gradients where possible. */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Do not force an overall background color; let the page use its natural backgrounds.
+    If you want a solid background for print, re-enable a background-color here. */
+
+  /* Keep gradient utility classes from being overridden to white */
+  .bg-gradient-to-br, .bg-gradient-to-r, .bg-gradient-to-l {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-image: inherit !important;
+  }
+
+  .shadow, .shadow-lg, .shadow-2xl {
+    box-shadow: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .rounded-2xl, .bg-white, .p-6, .p-4 {
+    page-break-inside: avoid;
+  }
+}
+
