@@ -70,7 +70,7 @@ export default function ResumePage() {
             <div className="bg-[#667eea] rounded-2xl p-6 text-white text-center shadow relative">
               <Image src="/images/resume/ludiel.jpg" alt="루디엘 액션 RPG" width={400} height={200} className="w-[400px] h-[180px] rounded-xl object-cover mb-4 mx-auto" />
               <div className="font-bold text-lg mb-2">🗡️ 루디엘 (액션 RPG)</div>
-              <div className="text-base opacity-90">모바일 액션 RPG<br />실시간 PVP, 길드전, 타운 시스템</div>
+              <div className="text-base opacity-90">Unity 모바일 액션 RPG<br />실시간 PVP, 길드전, 타운 시스템</div>
             </div>
             <div className="bg-[#667eea] rounded-2xl p-6 text-white text-center shadow relative">
               <Image src="/images/resume/ava.jpg" alt="아바 A.V.A FPS" width={400} height={200} className="w-[400px] h-[180px] rounded-xl object-cover mb-4 mx-auto" />
