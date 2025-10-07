@@ -89,7 +89,7 @@ export default function Home() {
                 <a href="/register" className="inline-block bg-yellow-400 text-slate-800 font-medium px-4 py-2 rounded-full shadow hover:bg-yellow-500 transition">회원가입</a>
               </div>
               <div className="mt-4 flex justify-center">
-                <a href="/portfolio-title-page" className="inline-block bg-slate-600 text-white font-medium px-6 py-2 rounded-full shadow hover:bg-slate-700 transition">포트폴리오 | 이력서</a>
+                <a href="/portfolio-title-page" className="inline-block bg-slate-600 text-white font-medium px-6 py-2 rounded-full shadow hover:bg-blue-700 transition">포트폴리오 | 이력서</a>
               </div>
             </>
           )}

@@ -36,16 +36,27 @@ export default function PortfolioTitlePage() {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="flex gap-3 mb-6">
-          <a
-            href="https://github.com/sontaemin80-debug/taemin-portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 h-12 rounded-full text-white bg-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline"
-          >
-            포트폴리오
-          </a>
-          <a href="/resume" className="flex-1 h-12 rounded-full text-[#667deb] bg-white border-2 border-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline">이력서</a>
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <div className="flex flex-col gap-3">
+            <a href="/resume" className="w-full h-12 rounded-full text-[#667deb] bg-white border-2 border-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline">이력서</a>
+            <a
+              href="https://github.com/sontaemin80-debug/taemin-portfolio"
+              rel="noopener noreferrer"
+              className="w-full h-12 rounded-full text-white bg-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline"
+            >
+              포트폴리오
+            </a>
+          </div>
+          
+          <div className="flex flex-col gap-3">
+            <a
+              href="/ai-video-portfolio"
+              rel="noopener noreferrer"
+              className="w-full h-12 rounded-full text-white bg-red-600 font-semibold text-[16px] transition-colors flex items-center justify-center no-underline"
+            >
+              AI 컨텐츠 포트폴리오
+            </a>
+          </div>
         </section>
         {/* Contact Section */}
         <section className="bg-white rounded-2xl shadow-lg px-4 pt-6 pb-5 text-center">
