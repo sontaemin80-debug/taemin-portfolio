@@ -37,7 +37,14 @@ export default function PortfolioTitlePage() {
         </section>
         {/* CTA Section */}
         <section className="flex gap-3 mb-6">
-          <button className="flex-1 h-12 rounded-full text-white bg-[#667deb] font-semibold text-[16px] transition-colors">프로젝트 보기</button>
+          <a
+            href="https://github.com/sontaemin80-debug/taemin-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 h-12 rounded-full text-white bg-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline"
+          >
+            포트폴리오
+          </a>
           <a href="/resume" className="flex-1 h-12 rounded-full text-[#667deb] bg-white border-2 border-[#667deb] font-semibold text-[16px] transition-colors flex items-center justify-center no-underline">이력서</a>
         </section>
         {/* Contact Section */}
@@ -54,9 +61,16 @@ export default function PortfolioTitlePage() {
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:underline text-[#4a5769]"
             >
-              <span className="text-lg">💻</span>GitHub|포트폴리오
+              <span className="text-lg">💻</span>GitHub
             </a>
-            <span className="flex items-center gap-1"><span className="text-lg">💼</span>LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/taemin-son-988125389/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 hover:underline text-[#4a5769]"
+            >
+              <span className="text-lg">💼</span>LinkedIn
+            </a>
           </div>
         </section>
       </div>

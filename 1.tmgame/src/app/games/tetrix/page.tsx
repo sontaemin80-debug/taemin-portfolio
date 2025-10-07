@@ -1,5 +1,6 @@
 ﻿"use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { supabase } from "../../../lib/supabaseClient";
 import { useRouter } from "next/navigation";
 
 const BLOCK_COLORS = [
@@ -17,6 +18,7 @@ function createRandomBlockStyle() {
 export default function TetrixGamePage() {
   const router = useRouter();
   const floatingRef = useRef<HTMLDivElement | null>(null);
+  const [user, setUser] = useState<{ email?: string | null; name?: string | null } | null>(null);
 
   useEffect(() => {
     const container = floatingRef.current;
@@ -41,31 +43,62 @@ export default function TetrixGamePage() {
     };
   }, []);
 
+  // Supabase로 로그인된 사용자 정보 가져오기
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const {
+          data: { user: suser },
+        } = await supabase.auth.getUser();
+        if (!mounted) return;
+        if (suser) {
+          const meta = (suser.user_metadata ?? {}) as Record<string, unknown>;
+          const name = (meta["display_name"] as string) || (meta["name"] as string) || null;
+          setUser({ email: suser.email, name });
+        }
+      } catch {
+        // ignore
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
+    
     <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600 overflow-hidden">
-      {/* 나가기 버튼 */}
-      <button
-        className="absolute top-6 left-6 z-20 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-full shadow-lg transition"
-        onClick={() => router.push("/game-title-page")}
-      >
-        나가기
-      </button>
+      {/* (나가기 버튼을 버튼 컨테이너로 이동했습니다) */}
       <div ref={floatingRef} className="floating-blocks absolute top-0 left-0 w-full h-full pointer-events-none z-0" />
       <main className="main-container text-center text-white z-10 relative">
-        <h1 className="title text-5xl font-bold mb-4 drop-shadow-lg animate-pulse">🎮 Taemin테트리스</h1>
+  <h1 className="title text-5xl font-bold mt-[30px] mb-4 drop-shadow-lg animate-pulse">🎮 TMGame</h1>
         <p className="subtitle text-xl mb-12 opacity-90 drop-shadow">클래식 퍼즐 게임의 재미를 느껴보세요!</p>
         <div className="button-container flex flex-col gap-5 items-center mb-10">
+          <div className="welcome-text text-white text-lg font-semibold">
+            {user && (user.name || user.email) ? (
+              <div>{user.name ? `${user.name} (${user.email})님, 환영합니다!` : `${user.email}님, 환영합니다!`}</div>
+            ) : (
+              <div>게스트님 환영합니다!</div>
+            )}
+          </div>
           <button
-            className="main-button bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-10 rounded-full text-2xl shadow-lg hover:from-green-600 hover:to-green-500 transition"
+            className="action-button bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg hover:from-green-600 hover:to-green-500 transition w-64"
             onClick={() => router.push("/games/tetrix/play")}
           >
             게임 시작
           </button>
           <button
-            className="secondary-button bg-gradient-to-r from-blue-500 to-blue-700 text-white py-3 px-8 rounded-full text-lg shadow hover:from-blue-700 hover:to-blue-500 transition"
+            className="action-button bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg hover:from-blue-700 hover:to-blue-500 transition w-64"
             onClick={() => router.push("/games/tetrix/ranking")}
           >
             랭킹 보기
+          </button>
+          <button
+            className="action-button bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transition w-64"
+            onClick={() => router.push('/game-title-page')}
+          >
+            나가기
           </button>
         </div>
         <div className="features grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8">
