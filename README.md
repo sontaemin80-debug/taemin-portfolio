@@ -1,4 +1,4 @@
-# 1.tmgame
+# tmgame
 
 이 저장소는 이력서와 포트폴리오(웹/게임)를 포함한 Node.js 기반 웹 애플리케이션 프로젝트입니다.
 
@@ -8,13 +8,13 @@
 
 - 이력서(웹): https://tmgame.vercel.app/resume
 - 이력서(PDF): https://tmgame.vercel.app/pdf/SonTaemin_Resume.pdf
-- Tetrix 게임(웹 실행 안내): https://tmgame.vercel.app/games/tetrix
+- 퍼즐게임(모바일웹): https://tmgame.vercel.app/games/tetrix
 
 ---
 
 ## 프로젝트 설명
 
-`1.tmgame`은 개인 포트폴리오와 게임 데모를 포함한 Next.js(React + TypeScript) 기반 웹 프로젝트입니다. 웹 이력서와 게임, 코드 샘플을 통해 개발 경험과 작업물을 확인할 수 있습니다.
+`tmgame`은 개인 포트폴리오와 게임 데모를 포함한 Next.js(React + TypeScript) 기반 웹 프로젝트입니다. 웹 이력서와 게임, 코드 샘플을 통해 개발 경험과 작업물을 확인할 수 있습니다.
 
 ---
 
@@ -67,10 +67,5 @@
 
 ---
 
-## 기여 및 문의
 
-간단한 수정 제안, 이슈 제보 또는 질문은 이 저장소의 이슈 트래커를 이용해주세요.
-
----
-
-파일: `1.tmgame` 폴더에 포트폴리오 및 게임 소스가 포함되어 있습니다.
+파일: `1.tmgame` `2.TMConsoleShooter` 폴더에 포트폴리오 및 게임 소스(TypeScript, C#)가 포함되어 있습니다.
