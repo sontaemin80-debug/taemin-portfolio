@@ -54,7 +54,7 @@ export default function PortfolioTitlePage() {
               rel="noopener noreferrer"
               className="w-full h-12 rounded-full text-white bg-red-600 font-semibold text-[16px] transition-colors flex items-center justify-center no-underline"
             >
-              AI 컨텐츠 포트폴리오
+              AI Contents
             </a>
           </div>
         </section>

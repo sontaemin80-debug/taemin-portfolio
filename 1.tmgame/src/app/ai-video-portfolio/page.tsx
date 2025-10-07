@@ -166,24 +166,21 @@ export default function AiVideoPortfolioPage() {
                 {/* Header Section */}
         <section className="bg-white rounded-2xl shadow-lg px-4 pt-6 pb-5 flex flex-col items-center">
           <div className="text-[32px] font-bold text-[#2e3847] mb-2 leading-[38px]">손태민</div>
-          <div className="text-[20px] font-semibold text-[#667deb] mb-2">Client Programmer</div>
           <div className="text-[#738096] text-center text-[15px] mb-4 leading-tight">
-            언리얼엔진 유니티 컨텐츠 개발 프로그래머입니다.<br />
-            다양한 툴을 활용한 AI 컨텐츠 개발에도 열정을 가지고있습니다.
+            AI를 활용한 리소스제작 Avatar, Image, Video, TTS, Sound, Scenario<br />
+            게임 제작에 필요한 리소스를 개발하기 위해 다양한 테스트를 진행했습니다. <br />
           </div>
           <div className="flex flex-wrap gap-2 justify-center">
-            <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">SunoAI</span>
             <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Google AI Sudio</span>
+            <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Abocado.ai</span>
+            <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Suno</span>
             <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Hedra</span>
             <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Capcut</span>
-            <span className="bg-[#f7fafc] border border-[#e3e8f0] rounded-full px-4 py-1 text-[#4a5769] text-[14px] font-medium">Vrew</span>
           </div>
         </section>
         <section className="bg-white rounded-2xl shadow-lg px-4 pt-6 pb-5 flex flex-col items-center">
-          <div className="text-[28px] font-bold text-[#2e3847] mb-1 leading-[34px]">포트폴리오</div>
-          <div className="text-[15px] text-[#667deb] mb-2">유튜브 개설하여 제작한 리소스에대한 유저 반응을 확인.</div>
-          <div className="text-[#738096] text-center text-[14px] mb-4 leading-tight">AI를 활용한 리소스(Avatar, Image, Video, TTS, Sound)</div>
-
+          <div className="text-[28px] font-bold text-[#2e3847] mb-1 leading-[34px]">유튜브 채널</div>
+          <div className="text-[15px] text-[#667deb] mb-2">제작된 리소스를 활용하여 채널을 꾸미고 유저들이 좋아하는지 확인해 봤습니다.</div>
           <div className="flex flex-wrap gap-2 justify-center">
             <a
               href="https://www.youtube.com/@%EB%83%A0%EB%83%A0%EC%BF%A1%EC%BF%A1"
@@ -192,7 +189,7 @@ export default function AiVideoPortfolioPage() {
               className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-red-600 text-white font-semibold text-[14px] no-underline"
             >
               <span className="text-lg">🎬</span>
-              1.냠냠쿡쿡
+              냠냠쿡쿡
             </a>
             <a
               href="https://www.youtube.com/@KPopDev"
@@ -201,7 +198,7 @@ export default function AiVideoPortfolioPage() {
               className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-red-600 text-white font-semibold text-[14px] no-underline"
             >
               <span className="text-lg">🎬</span>
-              2.KPopDev
+              KPopDev
             </a>
             <a
               href="https://www.youtube.com/@%EA%BF%80%EC%9E%A0%ED%9C%B4%EA%B2%8C%EC%86%8C"
@@ -210,13 +207,13 @@ export default function AiVideoPortfolioPage() {
               className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-red-600 text-white font-semibold text-[14px] no-underline"
             >
               <span className="text-lg">🎬</span>
-              3.꿀잠 휴게소
+              꿀잠 휴게소
             </a>
           </div>
         </section>
 
         <section className="bg-white rounded-2xl shadow-lg px-4 pt-6 pb-5">
-          <div className="text-[20px] font-bold text-[#2e3847] mb-4 leading-[26px] text-center">AI툴을 이용한 컨텐츠 개발</div>
+          <div className="text-[20px] font-bold text-[#2e3847] mb-4 leading-[26px] text-center">AI Contents</div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {SAMPLE_VIDEOS.map((v) => (
               <article key={v.id} className="bg-white rounded-xl shadow p-3">
