@@ -6,9 +6,11 @@
 
 ## 빠른 링크
 
+- 이력서및 포트폴리오 : https://tmgame.vercel.app/portfolio-title-page
+- 퍼즐게임(모바일웹): https://tmgame.vercel.app/games/tetrix
+
 - 이력서(웹): https://tmgame.vercel.app/resume
 - 이력서(PDF): https://tmgame.vercel.app/pdf/SonTaemin_Resume.pdf
-- 퍼즐게임(모바일웹): https://tmgame.vercel.app/games/tetrix
 
 ---
 
